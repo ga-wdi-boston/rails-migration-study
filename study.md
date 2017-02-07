@@ -42,9 +42,10 @@ What is the name of the method that creates a new column?
 <!-- your response here -->
 ```
 
-I want to create a table called `pets` with columns `name` and `breed`, both
-strings. `name` cannot be blank and must be unique. Write the migration you
-would use to satisfy these requirements.
+Suppose that an application needs a table called `pets` with the columns `name`
+and `breed`, both of which are strings. `name` cannot be blank and must be
+unique. Write the migration would be used to create a table satisfying these
+requirements.
 
 ```ruby
 # your response here
@@ -58,7 +59,7 @@ In your own words, explain the role of application seed data.
 <!-- your response here -->
 ```
 
-Should you use seeds to create data to experiment with during development?
+Should seed data be used for experimentation during development?
 
 ```md
 <!-- your response here -->
