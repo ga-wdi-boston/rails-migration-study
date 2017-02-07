@@ -4,11 +4,10 @@
 
 ## Prerequisites
 
--   Topics with which developers should be familiar with.
--   Prerequisites are "just-in-time", so if I have a prerequisite that mentions
-    Sass, I would **not** need to include CSS as a prerequisite.
--   [Links to previous materials](https://www.github.com/ga-wdi-boston/example)
-    are often useful. Previous materials might include talks or other studies.
+-   [Rails API Overview](https://github.com/ga-wdi-boston/rails-api)
+-   [Rails as an API Study](https://github.com/ga-wdi-boston/rails-api-study)
+-   [Rails API Single Resource](https://github.com/ga-wdi-boston/rails-api-single-resource)
+-   [Rails ActiveRecord Study](https://github.com/ga-wdi-boston/rails-activerecord-crud-study)
 
 ## Objectives
 
