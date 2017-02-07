@@ -17,7 +17,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
         (chapters 1, 2.1, 2.2, 3.1, 3.3, 3.4, 3.5, 3.8, 6, 8)
 
 ## Additional Resources
--   [Active Record Migrations](http://guides.rubyonrails.org/active_record_migrations.html) (the entirety)
+-   [Active Record Migrations](http://guides.rubyonrails.org/active_record_migrations.html)
+    (the entirety)
 
 ## Explain the Role of Migrations
 
