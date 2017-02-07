@@ -1,4 +1,4 @@
-# EXAMPLE Study
+# Rails Migrations Study
 
 Use your favorite search engine and the provided readings to research and
 respond to the following questions.
@@ -10,34 +10,52 @@ material. Instead, digest what you've read and repeat it in your own voice.
 
 ## Required Readings
 
--   [Example Reading](https://www.github.com/ga-wdi-boston/example)
--   [Example Reading](https://www.github.com/ga-wdi-boston/example)
--   [Example Reading](https://www.github.com/ga-wdi-boston/example)
+-   Ruby on Rails Guides
+    -   [Active Record Basics Migrations](http://guides.rubyonrails.org/active_record_basics.html#migrations)
+        (chapter 8)
+    -   [Active Record Migrations](http://guides.rubyonrails.org/active_record_migrations.html)
 
-## EXAMPLE: Define "single-page application" (SPA)
+## Explain the Role of Migrations
 
-In your own words, define what a SPA is. In your answer, be sure to cite any
-relevant sources you consulted in your search.
+In your own words, define migrations and explain why developers use them.
 
 ```md
-<!-- your answer here -->
+<!-- your response here -->
 ```
 
-## EXAMPLE: Define "page" as used by non-developers
+## Reference Documentation for Migrations
 
-What do users mean when they say "page"? What did you mean before your started
-your search to define SPAs?
+In ActiveRecord Migrations, what is the name of the method the creates a new
+table?
 
 ```md
-<!-- your answer here -->
+<!-- your response here -->
 ```
 
-## EXAMPLE: Define "view" and "view-state"
-
-Within the context of SPAs, what do developers mean when they say "view"? Since
-view can have many meanings, what do developers mean when they say "view-state"?
-How do front-end "routers" help manage view-state?
+What is the name of the method that creates a new column?
 
 ```md
-<!-- your answer here -->
+<!-- your response here -->
+```
+
+I want to create a table called `pets` with columns `name` and `breed`, both
+strings. `name` cannot be blank and must be unique. Write the migration you
+would use to satisfy these requirements.
+
+```ruby
+# your response here
+```
+
+## Explain the Role of Seed Data
+
+In your own words, explain the role of application seed data.
+
+```md
+<!-- your response here -->
+```
+
+Should you use seeds to create data to experiment with during development?
+
+```md
+<!-- your response here -->
 ```
