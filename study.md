@@ -73,6 +73,8 @@ Should seed data be used for experimentation during development?
 
 ```md
 I think so, because you probably don't want to test with actual factual data in case something goes wrong when you're constantly reloading your database.
-
-also-- in the seed section I also looked at [this post by David Morales] (https://davidmles.com/blog/seeding-database-rails/) and [xyzpub](http://www.xyzpub.com/en/ruby-on-rails/3.2/seed_rb.html)
 ```
+
+## Other sources I used
+
+In the seed section I also looked at [this post by David Morales] (https://davidmles.com/blog/seeding-database-rails/) and [xyzpub](http://www.xyzpub.com/en/ruby-on-rails/3.2/seed_rb.html)
