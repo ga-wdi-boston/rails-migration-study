@@ -25,7 +25,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, define migrations and explain why developers use them.
 
 ```md
-<!-- your response here -->
+Migrations are a way for Rails developers to update a database. This allows developers to track changes over time and easily implement or rollback changes.
 ```
 
 ## Reference Documentation for Migrations
@@ -34,14 +34,18 @@ In ActiveRecord Migrations, what is the name of the method the creates a new
 table?
 
 ```md
-<!-- your response here -->
+`create_table`
 ```
+
+http://guides.rubyonrails.org/active_record_migrations.html#creating-a-table
 
 What is the name of the method that creates a new column?
 
 ```md
-<!-- your response here -->
+`add_column`
 ```
+
+http://guides.rubyonrails.org/active_record_migrations.html#creating-a-standalone-migration
 
 Suppose that an application needs a table called `pets` with the columns `name`
 and `breed`, both of which are strings. `name` cannot be blank and must be
@@ -49,19 +53,35 @@ unique. Write the migration would be used to create a table satisfying these
 requirements.
 
 ```ruby
-# your response here
+class CreatePets < ActiveRecord::Migration[5.0]
+  def change
+    create_table :pets do |t|
+      t.string :name, :null => false, uniqueness: true
+      t.string :breed
+
+      t.timestamps
+    end
+  end
+end
 ```
+
+- http://stackoverflow.com/questions/19972913/validates-presense-vs-null-false-in-rails-models-tables
+- http://guides.rubyonrails.org/active_record_migrations.html#creating-a-standalone-migration
 
 ## Explain the Role of Seed Data
 
 In your own words, explain the role of application seed data.
 
 ```md
-<!-- your response here -->
+Seed data provides a way to quickly add data after a database has already been created.
 ```
+
+http://guides.rubyonrails.org/active_record_migrations.html#migrations-and-seed-data
 
 Should seed data be used for experimentation during development?
 
 ```md
-<!-- your response here -->
+Yes. Seed data is helpful in the development or testing process when some initial data must be present to work with the application.
 ```
+
+http://guides.rubyonrails.org/active_record_migrations.html#migrations-and-seed-data
