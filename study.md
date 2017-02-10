@@ -25,7 +25,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, define migrations and explain why developers use them.
 
 ```md
-<!-- your response here -->
+Migrations allow the developer to evolve a database schema over time using Ruby instead of making modifications in SQL. Each migration, in essence, creates a new version of the database with updated features including the addition or removal of columns, entries, and tables. Each migration also updates your schema.rb file to reflect the changes of the latest migration. Developers use migration because it is an easy and convenient way to keep your database and associated files flexible and adaptable over time.
 ```
 
 ## Reference Documentation for Migrations
@@ -34,13 +34,15 @@ In ActiveRecord Migrations, what is the name of the method the creates a new
 table?
 
 ```md
-<!-- your response here -->
+create_table
 ```
 
 What is the name of the method that creates a new column?
 
 ```md
-<!-- your response here -->
+change_table can do it
+or
+add_column
 ```
 
 Suppose that an application needs a table called `pets` with the columns `name`
@@ -49,7 +51,17 @@ unique. Write the migration would be used to create a table satisfying these
 requirements.
 
 ```ruby
-# your response here
+class CreatePets < ActiveRecord::Migration[5.0]
+  validates :name,
+            presence: true,
+            uniqueness: true
+  def change
+    create_table :pets do |t|
+      t.string :breed
+      t.string :name
+    end
+  end
+end
 ```
 
 ## Explain the Role of Seed Data
@@ -57,11 +69,11 @@ requirements.
 In your own words, explain the role of application seed data.
 
 ```md
-<!-- your response here -->
+The role of application seed data is to allow the ability to add initial data after the database is created.
 ```
 
 Should seed data be used for experimentation during development?
 
 ```md
-<!-- your response here -->
+Yes because it makes the development process much easier as during testing the developer will not have to manually enter initial data to a database before he/she runs tests on the application.
 ```
