@@ -54,7 +54,9 @@ unique. Write the migration would be used to create a table satisfying these
 requirements.
 
 ```ruby
-bin/rails generate migration Createpets] [columnname]:[columntype]
+bin/rails generate migration Createpets name: string {unique: true null: false}
+breed: string
+
 ```
 
 ## Explain the Role of Seed Data
@@ -62,11 +64,12 @@ bin/rails generate migration Createpets] [columnname]:[columntype]
 In your own words, explain the role of application seed data.
 
 ```md
-<!-- your response here -->
+Seed data allows you to quickly set up a basic, clean database that you can then
+use Rails to make systematic modifications to. 
 ```
 
 Should seed data be used for experimentation during development?
 
 ```md
-<!-- your response here -->
+Yes, it's a clean way to set up an empty database.
 ```
