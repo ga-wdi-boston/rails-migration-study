@@ -57,8 +57,9 @@ requirements.
 class Application < ActiveRecord::Migration
 def change_data
 create_table :pets do |t|
-  t.string :name
+  t.string :name, :default =>"add your value here"
   t.string :breed
+end
 end
 
 
