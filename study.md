@@ -25,7 +25,10 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, define migrations and explain why developers use them.
 
 ```md
-<!-- your response here -->
+Migrations allow us to alter database schema conveniently, keeping them
+independent from the database.
+https://scotch.io/tutorials/understanding-migrations-in-rails
+http://guides.rubyonrails.org/active_record_migrations.html
 ```
 
 ## Reference Documentation for Migrations
@@ -34,13 +37,21 @@ In ActiveRecord Migrations, what is the name of the method the creates a new
 table?
 
 ```md
-<!-- your response here -->
+create_table
+
+http://guides.rubyonrails.org/active_record_migrations.html
 ```
 
 What is the name of the method that creates a new column?
 
 ```md
-<!-- your response here -->
+t.string creates a column called name.
+
+create_table :products do |t|
+  t.string :name
+end
+
+http://guides.rubyonrails.org/active_record_migrations.html
 ```
 
 Suppose that an application needs a table called `pets` with the columns `name`
@@ -49,19 +60,33 @@ unique. Write the migration would be used to create a table satisfying these
 requirements.
 
 ```ruby
-# your response here
+
+class CreatePets < ActiveRecord::Migration[5.0]
+  def change
+    create_table :pets do |t|
+      t.string :name, :default => "something"
+      t.string :breed
+    end
+  end
+end
 ```
+
+http://stackoverflow.com/questions/7098602/add-a-default-value-to-a-column-through-a-migration
+
+http://guides.rubyonrails.org/active_record_migrations.html
 
 ## Explain the Role of Seed Data
 
 In your own words, explain the role of application seed data.
 
 ```md
-<!-- your response here -->
+To quickly add data to database after it has been created. You store the
+instructions for inserting that data in db/seeds.rb
+http://guides.rubyonrails.org/active_record_migrations.html
 ```
 
 Should seed data be used for experimentation during development?
 
 ```md
-<!-- your response here -->
+Yes!
 ```
