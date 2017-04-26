@@ -25,8 +25,7 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, define migrations and explain why developers use them.
 
 ```md
-<!-- your response here -->
-```
+Migrations are a convenient way to change databases, without writing SQL.  It also allows changes to be independent from the database```
 
 ## Reference Documentation for Migrations
 
