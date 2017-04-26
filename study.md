@@ -80,5 +80,5 @@ Should seed data be used for experimentation during development?
 
 ```md
 <!-- your response here -->
-Yes, it's one of the key rolls of seed data
+Yes, it's one of the key roles of seed data.
 ```
