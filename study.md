@@ -25,7 +25,12 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, define migrations and explain why developers use them.
 
 ```md
-<!-- your response here -->
+<!--
+A migration contains a specific set of instructions for the database that is used and created for the application it is backing. The migration contains tables that are stored and used. When a migration file is run, rails is able to both make changes to the database and automatically create a table. Without this, the application itself would be somewhat useless.
+Developers use migrations to enable them to deploy to production in a more seamless, less error prone manner, rather than updating anything for deployment manually.
+
+additional resource: http://culttt.com/2015/10/07/understanding-ruby-on-rails-migrations/
+ -->
 ```
 
 ## Reference Documentation for Migrations
@@ -34,13 +39,13 @@ In ActiveRecord Migrations, what is the name of the method the creates a new
 table?
 
 ```md
-<!-- your response here -->
+<!-- create_table -->
 ```
 
 What is the name of the method that creates a new column?
 
 ```md
-<!-- your response here -->
+<!-- add_column-->
 ```
 
 Suppose that an application needs a table called `pets` with the columns `name`
@@ -49,7 +54,15 @@ unique. Write the migration would be used to create a table satisfying these
 requirements.
 
 ```ruby
-# your response here
+class CreatePets < ActiveRecord::Migration[5.0]
+   def change
+     create_table :pets do |t|
+       t.string :name, default:"unique name"
+       t.string :breed
+       t.timestamps
+     end
+   end
+ end
 ```
 
 ## Explain the Role of Seed Data
@@ -57,11 +70,15 @@ requirements.
 In your own words, explain the role of application seed data.
 
 ```md
-<!-- your response here -->
+<!-- Seed data is used for filling an empty database with default values.
+This gives you more immediate full access to all classes and methods within your application, meaning you wont need to enter everything manually in the rails console in order to make the records
+
+additional resource used: http://www.xyzpub.com/en/ruby-on-rails/3.2/seed_rb.html
+-->
 ```
 
 Should seed data be used for experimentation during development?
 
 ```md
-<!-- your response here -->
+<!-- Yes, it should be used. -->
 ```
