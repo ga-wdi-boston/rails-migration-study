@@ -25,7 +25,9 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, define migrations and explain why developers use them.
 
 ```md
-<!-- your response here -->
+Migrations are like versions of a database. I suppose it's a little like creating
+commits in git.  If you screw somethign up, you can revert to the previous working
+version.
 ```
 
 ## Reference Documentation for Migrations
@@ -34,13 +36,13 @@ In ActiveRecord Migrations, what is the name of the method the creates a new
 table?
 
 ```md
-<!-- your response here -->
+create_table
 ```
 
 What is the name of the method that creates a new column?
 
 ```md
-<!-- your response here -->
+t.string to create a string column, t.text to create a text column, etc.
 ```
 
 Suppose that an application needs a table called `pets` with the columns `name`
@@ -49,7 +51,14 @@ unique. Write the migration would be used to create a table satisfying these
 requirements.
 
 ```ruby
-# your response here
+class CreatePets < ActiveRecord::Migration[5.0]
+  def change
+    create_table :pets do |t|
+      t.string :name, null: false, unique: true
+      t.string :breed
+    end
+  end
+end
 ```
 
 ## Explain the Role of Seed Data
@@ -57,11 +66,11 @@ requirements.
 In your own words, explain the role of application seed data.
 
 ```md
-<!-- your response here -->
+It's dummy data that you add to the database upon creation so you can test.
 ```
 
 Should seed data be used for experimentation during development?
 
 ```md
-<!-- your response here -->
+Yes, I think that's mainly what it's used for.
 ```
