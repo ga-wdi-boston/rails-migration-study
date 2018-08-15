@@ -25,7 +25,8 @@ material. Instead, digest what you've read and repeat it in your own voice.
 In your own words, define migrations and explain why developers use them.
 
 ```md
-<!-- your response here -->
+
+A migration is a method used to update and create schemas for a databse. Developers use migrations as opposed to manually changing and creating each schema to take advantage of version control and automate redundant tasks.
 ```
 
 ## Reference Documentation for Migrations
@@ -40,7 +41,7 @@ table?
 What is the name of the method that creates a new column?
 
 ```md
-<!-- your response here -->
+bin/rails generate migration AddColumnToTable
 ```
 
 Suppose that an application needs a table called `pets` with the columns `name`
@@ -49,7 +50,9 @@ unique. Write the migration would be used to create a table satisfying these
 requirements.
 
 ```ruby
-# your response here
+
+bin/rails generate migration CreatePets name:string null: false,  breed:string
+
 ```
 
 ## Explain the Role of Seed Data
@@ -57,11 +60,13 @@ requirements.
 In your own words, explain the role of application seed data.
 
 ```md
-<!-- your response here -->
+Seed data populates newly created databases with pseudo data so that developers can begin programming and/or testing without the need of having real data.
+
 ```
 
 Should seed data be used for experimentation during development?
 
 ```md
-<!-- your response here -->
+
+Seeds are meant for testing. Its good to test with seeds to make sure the entity relations are acting as they should.
 ```
